@@ -1,0 +1,19 @@
+<launch>
+    
+    <!-- （文本->目标点） -->
+    <node pkg="ros_iat" type="goal_pub" name="voice_goal_pub"/>
+
+    <!-- (语音->文本) -->
+    <node pkg="ros_iat" type="iat_pub" name="voice_iat_pub"/>
+
+    <!-- (语音合成：文本->语音) -->
+    <node pkg="ros_iat" type="tts_pub" name="voice_tts_pub"/>
+    
+    <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find laser)/config/show_mycar.rviz" /> -->
+</launch>
+
+
+<!-- # 启动仿真环境
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+# 启动rviz
+roslaunch turtlebot3_navigation turtlebot3_navigation.launch -->
